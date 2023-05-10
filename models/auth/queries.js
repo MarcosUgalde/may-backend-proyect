@@ -8,6 +8,13 @@ const insertUser = (username, password) => sql.unsafe`
     );
 `;
 
+const selectByUsername = (username) => sql.unsafe`
+    SELECT username, password 
+    FROM users
+    WHERE username LIKE ${username};
+`;
+
 module.exports = {
   insertUser,
+  selectByUsername,
 };
