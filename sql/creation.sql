@@ -8,3 +8,11 @@ CREATE TABLE IF NOT EXISTS users (
     password TEXT NOT NULL,
     description TEXT
 );
+
+CREATE TABLE IF NOT EXISTS publication (
+    title TEXT NOT NULL,
+    text_body TEXT NOT NULL,
+    user_id uuid REFERENCES users
+        ON UPDATE CASCADE
+        ON DELETE SET NULL
+);
