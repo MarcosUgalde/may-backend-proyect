@@ -8,3 +8,4 @@ PONER AQUÏ TODO LO QUE HEMOS IDO HACIENDO
 6. Usando GET en la ruta localhost:4000/publications/:id puedes obtener la información de una publicación concreta
 7. Usando PUT en la ruta localhost:4000/publications/updatepost/:id puedes introducir los valores "newTitle" y "newText_body" para modificar el título o el contenido de la noticia
 8. Usando DELETE en la ruta localhost:4000/publications/deletepost/:id puedes eliminar esa publicación.
+9. Usande POST en la ruta localhost:4000/publications/:publication_id/newcomment puedes introducir un "response" para añadir un comentario a la noticia

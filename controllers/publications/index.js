@@ -5,6 +5,7 @@ const postById = require("./getPublication");
 const addPublication = require("./add-publication");
 const editedPost = require("./edit-post");
 const deletePublication = require("./delete-publication");
+const addComment = require("./add-comment");
 
 module.exports = (db) => {
   const publications = allPublications;
@@ -15,6 +16,9 @@ module.exports = (db) => {
 
   const newPost = addPublication;
   router.post("/newpost", authorizer, newPost(db));
+
+  const newComment = addComment;
+  router.post("/:publication_id/newcomment", newComment(db));
 
   const updatePost = editedPost;
   router.put("/updatepost/:id", authorizer, updatePost(db));
