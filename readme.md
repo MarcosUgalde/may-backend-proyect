@@ -6,3 +6,4 @@ PONER AQUÏ TODO LO QUE HEMOS IDO HACIENDO
 4. Usando POST en la ruta localhost:4000/publlications/newpost introduce "title" y "text_body" para añadir el título y el texto de la notica que quieras compartir.
 5. Usando GET en la ruta localhost:4000/publications puedes obtener todas las publicaciones disponibles.
 6. Usando GET en la ruta localhost:4000/publications/:id puedes obtener la información de una publicación concreta
+7. Usando PUT en la ruta localhost:4000/publications/updatepost/:id puedes introducir los valores "newTitle" y "newText_body" para modificar el título o el contenido de la noticia

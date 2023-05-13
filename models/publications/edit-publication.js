@@ -16,15 +16,9 @@ module.exports = (db) => async (newTitle, newText_body, id) => {
               END
             WHERE id = ${id}
     `);
-    /*await db.query(sql.unsafe`
-        UPDATE publication
-        SET title = ${newTitle ?? title}, 
-        text_body = ${newText_body ?? text_body}
-        WHERE id = ${id}
-    `)*/
+
     return {
       ok: true,
-      data: [newTitle, newText_body],
     };
   } catch (error) {
     console.log(error.message);
