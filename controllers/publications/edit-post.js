@@ -2,7 +2,12 @@ const errors = require("../../misc/errors");
 const { editPost } = require("../../models/publications");
 
 module.exports = (db) => async (req, res, next) => {
-  const publication = await editPost(await db)(req.body);
+  const { newTitle, newText_body } = req.body;
+  const publication = await editPost(await db)(
+    newTitle,
+    newText_body,
+    req.params.id
+  );
 
   if (!publication.ok) return next(errors[500]);
 
