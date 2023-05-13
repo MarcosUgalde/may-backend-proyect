@@ -6,6 +6,7 @@ const addPublication = require("./add-publication");
 const editedPost = require("./edit-post");
 const deletePublication = require("./delete-publication");
 const addComment = require("./add-comment");
+const deletingComment = require("./delete-comment");
 
 module.exports = (db) => {
   const publications = allPublications;
@@ -25,6 +26,9 @@ module.exports = (db) => {
 
   const deleted = deletePublication;
   router.delete("/deletepost/:id", deleted(db));
+
+  const deletedComment = deletingComment;
+  router.delete("/:publication_id/deletecomment/:id", deletedComment(db));
 
   return router;
 };
