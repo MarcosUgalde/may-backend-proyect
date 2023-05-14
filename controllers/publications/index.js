@@ -8,6 +8,7 @@ const deletePublication = require("./delete-publication");
 const addComment = require("./add-comment");
 const selecComments = require("./getComments");
 const selectOneComment = require("./getOne-comment");
+const updateComment = require("./editComment");
 const deletingComment = require("./delete-comment");
 
 module.exports = (db) => {
@@ -31,6 +32,9 @@ module.exports = (db) => {
 
   const updatePost = editedPost;
   router.put("/updatepost/:id", authorizer, updatePost(db));
+
+  const updatedComment = updateComment;
+  router.put("/:publication_id/comments/:id/updatecomment", updatedComment(db));
 
   const deleted = deletePublication;
   router.delete("/deletepost/:id", deleted(db));

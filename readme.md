@@ -13,3 +13,4 @@ PONER AQUÏ TODO LO QUE HEMOS IDO HACIENDO
 11. Usando DELETE en la ruta localhost:4000/publications/:publication_id/deletecomment/:id puedes eliminar un comentario publicado en una noticia
 12. Usando GET en la ruta localhost:4000/publications/:publication_id/comments puedes ver la noticia y todos los comentarios que se han hecho a esa publicación.
 13. Usando GET en la ruta localhost:4000/publications/:publication_id/comments/:id puedes ver el título de la noticia y el comentario
+14. Usando PUT en la ruta localhost:4000/publications/:publication_id/comments/:id/updatecomment puedes modificar un comentario hecho en una publicación.

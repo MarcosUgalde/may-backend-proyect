@@ -6,6 +6,7 @@ const deletePost = require("./delete-publication");
 const addComment = require("./comment-post");
 const getComments = require("./get-comments");
 const getOneComment = require("./get-one-comment");
+const editComment = require("./edit-comment");
 const deleteComment = require("./delete-comment");
 
 module.exports = db = {
@@ -17,5 +18,6 @@ module.exports = db = {
   addComment,
   getComments,
   getOneComment,
+  editComment,
   deleteComment,
 };
