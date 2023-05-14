@@ -6,6 +6,7 @@ const addPublication = require("./add-publication");
 const editedPost = require("./edit-post");
 const deletePublication = require("./delete-publication");
 const addComment = require("./add-comment");
+const selecComments = require("./getComments");
 const deletingComment = require("./delete-comment");
 
 module.exports = (db) => {
@@ -14,6 +15,9 @@ module.exports = (db) => {
 
   const publicationById = postById;
   router.get("/:id", publicationById(db));
+
+  const commentsByPost = selecComments;
+  router.get("/:publication_id/comments", commentsByPost(db));
 
   const newPost = addPublication;
   router.post("/newpost", authorizer, newPost(db));
