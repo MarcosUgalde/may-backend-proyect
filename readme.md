@@ -1,4 +1,4 @@
-PONER AQUÏ TODO LO QUE HEMOS IDO HACIENDO
+En este repositorio se encuentra el backend de una página web en la que se pueden poner noticias y comentarlas.
 
 1. Usando POST en la ruta localhost:4000/auth/signup introduce un "username" y un "password" que sean cadenas.
 2. Usando POST en la ruta localhost:4000/auth/signin introduce el username y el password para logearte.
